@@ -1,6 +1,5 @@
 using MaximumProblem;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace UnitTestMaxProblem
 {
     [TestClass]
@@ -23,6 +22,17 @@ namespace UnitTestMaxProblem
             //Arrange 
             int firstNum = 10, secondNum = 15, thirdNum = 3;
             int expected = secondNum;
+            //Act 
+            int result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetThirdPositionIntegerMaximumOutOfThree()
+        {
+            //Arrange 
+            int firstNum = 10, secondNum = 15, thirdNum = 30;
+            int expected = thirdNum;
             //Act 
             int result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
             //Assert

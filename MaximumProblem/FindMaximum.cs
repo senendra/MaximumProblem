@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace MaximumProblem
 {
     public class FindMaximum 
@@ -20,7 +19,6 @@ namespace MaximumProblem
             {
                 return secondNum;
             }
-
             else
             {
                 return thirdNum;
