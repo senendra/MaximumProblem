@@ -1,5 +1,7 @@
 using MaximumProblem;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Dynamic;
+
 namespace UnitTestMaxProblem
 {
     [TestClass]
@@ -35,6 +37,39 @@ namespace UnitTestMaxProblem
             int expected = thirdNum;
             //Act 
             int result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetFirstPositionDoubleMaximumOutOfThree()
+        {
+            //Arrange 
+            double firstNum = 10.1, secondNum = 2.2, thirdNum = 3.3;
+            double expected = firstNum;
+            //Act 
+            double result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetSecondPositionDoubleMaximumOutOfThree()
+        {
+            //Arrange 
+            double firstNum = 10.1, secondNum = 22.2, thirdNum = 3.3;
+            double expected = secondNum;
+            //Act 
+            double result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetThirdPositionDoubleMaximumOutOfThree()
+        {
+            //Arrange 
+            double firstNum = 10.1, secondNum = 22.2, thirdNum = 33.3;
+            double expected = thirdNum;
+            //Act 
+            double result = FindMaximum.MaxValue(firstNum, secondNum, thirdNum);
             //Assert
             Assert.AreEqual(expected, result);
         }
