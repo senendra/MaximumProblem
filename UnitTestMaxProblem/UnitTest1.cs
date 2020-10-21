@@ -73,5 +73,38 @@ namespace UnitTestMaxProblem
             //Assert
             Assert.AreEqual(expected, result);
         }
+        [TestMethod]
+        public void GetFirstPositionStringMaximumOutOfThree()
+        {
+            //Arrange 
+            string first = "Peace", second = "Apple", third = "Banana";
+            string expected = first;
+            //Act 
+            string result = FindMaximum.MaxValue(first, second, third);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetSecondPositionStringMaximumOutOfThree()
+        {
+            //Arrange 
+            string first = "Apple", second = "Peace", third = "Banana";
+            string expected = second;
+            //Act 
+            string result = FindMaximum.MaxValue(first, second, third);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+        [TestMethod]
+        public void GetThirdPositionStringMaximumOutOfThree()
+        {
+            //Arrange 
+            string first = "Apple", second = "Banana", third = "Peace";
+            string expected = third;
+            //Act 
+            string result = FindMaximum.MaxValue(first, second, third);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
