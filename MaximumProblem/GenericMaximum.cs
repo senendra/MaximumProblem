@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace MaximumProblem
 {
-    class GenericMaximum<T> where T : IComparable
+    public class GenericMaximum<T> where T : IComparable
     {
         public T[] array;
         public GenericMaximum(T[] array)
