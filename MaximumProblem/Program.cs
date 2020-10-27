@@ -6,12 +6,15 @@ namespace MaximumProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Maximum Problem Program");
-            int intfirstNum = 3, intsecondNum = 2, intthirdNum = 10;
-            Console.WriteLine("Maximum of " + intfirstNum + " , " + intsecondNum + " , " + intthirdNum + " is : " + FindMaximum.MaxValue(intfirstNum, intsecondNum, intthirdNum));
-            double doubleFirstNum = 3.3, doubleSecondNum = 2.2, doubleThirdNum = 1.1;
-            Console.WriteLine("Maximum of " + doubleFirstNum + " , " + doubleSecondNum + " , " + doubleThirdNum + " is : " + FindMaximum.MaxValue(doubleFirstNum, doubleSecondNum, doubleThirdNum));
-            string firstString = "Apple", secondString = "Peace", thirdString = "Banana";
-            Console.WriteLine("Maximum of " + firstString + " , " + secondString + " , " + thirdString + " is : " + FindMaximum.MaxValue(firstString, secondString, thirdString));
+            int[] intArray = { 11, 22, 33, 44, 55 };
+            GenericMaximum<int> genericInt = new GenericMaximum<int>(intArray);
+            Console.WriteLine(genericInt.MaximumValue());
+            float[] floatArray = { 11.1f, 22.2f, 33.3f, 44f, 55f };
+            GenericMaximum<float> genericFloat = new GenericMaximum<float>(floatArray);
+            Console.WriteLine(genericFloat.MaximumValue());
+            string[] stringArray = { "Apple", "Peace", "Banana", "Lemon", "Orange" };
+            GenericMaximum<string> genericString = new GenericMaximum<string>(stringArray);
+            Console.WriteLine(genericString.MaximumValue());
         }
     }
 }
