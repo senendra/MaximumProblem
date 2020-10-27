@@ -24,5 +24,10 @@ namespace MaximumProblem
             T[] sortedArray = Sort(this.array);
             return sortedArray[sortedArray.Length - 1];
         }
+        public void DisplayMax()
+        {
+            T[] sortedArray = Sort(this.array);
+            Console.WriteLine(sortedArray[sortedArray.Length-1]);
+        }
     }
 }
